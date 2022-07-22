@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Authcontroller;
 use App\Http\Controllers\ProdutoController;
 use App\Models\Produto;
 use Illuminate\Http\Request;
@@ -16,21 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware' => ['auth:sanctum']], function() {
+    Route::post('/produtos', [ProdutoController::class, 'store']);
+    Route::put('/produtos/{id}', [ProdutoController::class, 'update']);
+    Route::delete('produtos/{id}', [ProdutoController::class, 'destroy']);
+    Route::post('/logout', [AuthController::class, 'logout']);
 });
 
-
-// Route::controller(ProdutoController::class)->prefix('produto')->group(function(){
-//     Route::get('/index', [ProdutoController::class,'index'])->name('produto.index');
-//     Route::post('/store', [ProdutoController::class, 'store'])->name('produto.store');
-//     Route::get('/show/{id}', [ProdutoController::class, 'show'])->name('produto.show');
-//     Route::put('/update/{id}', [ProdutoController::class, 'update'])->name('produto.update');
-// });
-
-
 Route::get('/produtos', [ProdutoController::class,'index']);
-Route::post('/produtos', [ProdutoController::class, 'store']);
 Route::get('/produtos/{id}', [ProdutoController::class, 'show']);
-Route::put('/produtos/{id}', [ProdutoController::class, 'update']);
-Route::delete('produtos/{id}', [ProdutoController::class, 'destroy']);
+Route::post('/registrar', [Authcontroller::class, 'registrar_usuario']);
+Route::post('/login', [Authcontroller::class, 'login']);
