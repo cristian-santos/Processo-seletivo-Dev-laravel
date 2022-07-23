@@ -79,7 +79,9 @@ class ProdutoController extends Controller
             return [
                 'mensagem' => 'Produto deletado com sucesso!'
             ];
-        } else {
+        }
+
+        if(!$produto) {
             return [
                 'mensagem' => 'Houve algum problema!'
             ];

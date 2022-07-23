@@ -59,7 +59,9 @@ class Authcontroller extends Controller
             return [
                 'mensagem' => 'Usuário deletado com sucesso!'
             ];
-        } else {
+        } 
+        
+        if(!$usuario) {
             return [
                 'mensagem' => 'Houve algum problema!'
             ];

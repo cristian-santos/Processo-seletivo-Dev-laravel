@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['auth:sanctum']], function() {
     Route::post('/produtos', [ProdutoController::class, 'store']);
     Route::put('/produtos/{id}', [ProdutoController::class, 'update']);
-    Route::delete('produtos/{id}', [ProdutoController::class, 'destroy']);
-    Route::delete('deletarUsuario/{id}', [Authcontroller::class, 'destroy']);
+    Route::delete('/produtos/{id}', [ProdutoController::class, 'destroy']);
+    Route::delete('/deletar_usuario/{id}', [Authcontroller::class, 'destroy']);
     Route::post('/logout', [AuthController::class, 'logout']);
 });
 

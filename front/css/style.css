@@ -4,30 +4,16 @@
     box-sizing: border-box;
 }
 
+.fundo {
+    background: url("../css/fundo.svg") repeat top;
+}
+
 .login {
-    box-shadow: 10px 5px 5px black;
-    background-color: rgb(143, 172, 177);
+    box-shadow: 10px 5px 5px rgb(113, 143, 240);;
+    background-color: #fff;
     border-radius: 20px;
+    border: solid 1px rgb(113, 143, 240);
     height: 600px;
-}
-
-.card {
-    border: none;
-}
-
-.editar {
-    box-shadow: 10px 5px 5px black;
-    background-color: rgb(143, 172, 177);
-    border-radius: 20px;
-}
-
-.navbar-brand {
-    padding: 10px;
-}
-
-.navbar-nav {
-    padding: 10px;
-    margin-left: auto;
 }
 
 .navbar {
@@ -35,12 +21,29 @@
     margin-bottom: 25px;
 }
 
+.navbar-nav {
+    padding: 10px;
+    margin-left: auto;
+}
+
+.navbar-brand {
+    padding: 10px;
+}
+
+.card {
+    border: none;
+}
+
+.editar {
+    box-shadow:  2px 5px 20px 8px rgb(113, 143, 240);
+    background-color: #fff;
+    border-radius: 20px;
+}
+
 .lead {
     font-family:'Times New Roman', Times, serif;
     font-size: 25px;
 }
-
-
 
 .header {
     font-family:'Times New Roman', Times, serif;
