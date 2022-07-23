@@ -1,0 +1,57 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.login {
+    box-shadow: 10px 5px 5px black;
+    background-color: rgb(143, 172, 177);
+    border-radius: 20px;
+    height: 600px;
+}
+
+.card {
+    border: none;
+}
+
+.editar {
+    box-shadow: 10px 5px 5px black;
+    background-color: rgb(143, 172, 177);
+    border-radius: 20px;
+}
+
+.navbar-brand {
+    padding: 10px;
+}
+
+.navbar-nav {
+    padding: 10px;
+    margin-left: auto;
+}
+
+.navbar {
+    height: 70px;
+    margin-bottom: 25px;
+}
+
+.lead {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+
+
+.header {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #fff;
+}
+
+.detalhes {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.link {
+    text-decoration: none;
+}

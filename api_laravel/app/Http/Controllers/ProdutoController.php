@@ -30,7 +30,9 @@ class ProdutoController extends Controller
             'valor' => 'required'
         ]);
 
-        Produto::create($request->all());
+        $produto = Produto::create($request->all());
+
+        return $produto;
     }
 
     /**
@@ -41,7 +43,7 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        return Produto::findorFail($id);
+        return Produto::findOrFail($id);
     }
 
     /**
@@ -72,7 +74,15 @@ class ProdutoController extends Controller
      */
     public function destroy($id)
     {
-        return Produto::destroy($id);
-
+        $produto = Produto::destroy($id);
+        if($produto) {
+            return [
+                'mensagem' => 'Produto deletado com sucesso!'
+            ];
+        } else {
+            return [
+                'mensagem' => 'Houve algum problema!'
+            ];
+        }
     }
 }

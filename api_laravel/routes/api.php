@@ -2,8 +2,7 @@
 
 use App\Http\Controllers\Authcontroller;
 use App\Http\Controllers\ProdutoController;
-use App\Models\Produto;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +20,7 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
     Route::post('/produtos', [ProdutoController::class, 'store']);
     Route::put('/produtos/{id}', [ProdutoController::class, 'update']);
     Route::delete('produtos/{id}', [ProdutoController::class, 'destroy']);
+    Route::delete('deletarUsuario/{id}', [Authcontroller::class, 'destroy']);
     Route::post('/logout', [AuthController::class, 'logout']);
 });
 

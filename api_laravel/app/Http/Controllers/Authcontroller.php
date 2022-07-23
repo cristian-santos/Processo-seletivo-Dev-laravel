@@ -8,6 +8,17 @@ use Illuminate\Support\Facades\Hash;
 
 class Authcontroller extends Controller
 {
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return User::all();
+    }
+
     /**
      * 
      * Registrar usuário
@@ -34,6 +45,25 @@ class Authcontroller extends Controller
         ];
 
         return response($response, 200);
+    }
+
+    /**
+     * 
+     * Excluir usuário
+     */
+    public function destroy($id)
+    {
+        $usuario = User::destroy($id);
+        
+        if($usuario) {
+            return [
+                'mensagem' => 'Usuário deletado com sucesso!'
+            ];
+        } else {
+            return [
+                'mensagem' => 'Houve algum problema!'
+            ];
+        }
     }
 
     /**
