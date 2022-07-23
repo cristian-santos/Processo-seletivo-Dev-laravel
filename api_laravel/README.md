@@ -23,7 +23,7 @@ Para utilizar basta importar o dump do banco de dados disponibilizado e realizar
 - GET produto: Utilizando o método GET todos os produtos registrados serão exibidos e caso queria buscar um produto em específico basta informa o id do mesmo.
 
 ## Adicionando produto
-- POST produto: Para adicionar um produto é necessário informar no form os campos nome, descrição e valor.
+- POST produto: Para adicionar um produto é necessário informar no form os campos nome, descrição e valor e no campo.
 
 ## Atualizando produto
 - PUT produto: Para atualizar um produto é necessário informar no form os campos nome, descrição e valor e os novos valores a serem salvos.
@@ -42,3 +42,6 @@ Para utilizar basta importar o dump do banco de dados disponibilizado e realizar
 
 ## Deletando usuário
 - DELETE usuarios: Para deletar um usuario basta informar o seu respectivo id.
+
+## ⚠️ Observação
+ - Ao realizar as operações que necessitem de autenticação é necessário informar no campo bearer Token o token gerado ao realizar o login.
